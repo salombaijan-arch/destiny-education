@@ -4,6 +4,7 @@ export default function FooterExample() {
             <div className="max-w-6xl mx-auto px-6 py-16">
                 {/* Brand */}
                 <div className="flex flex-col items-center text-center mb-12">
+                    <img src="/footer-logo.png" alt="Destiny Education" className="w-24 h-24 object-contain mb-4 brightness-0 invert" />
                     <span className="text-2xl font-semibold tracking-tight mb-3">Destiny Education</span>
                     <p className="max-w-md text-sm leading-relaxed text-white/70">
                         Bu yerda o&apos;rganishning yoshi yo&apos;q. Hamjamiyatimizdagi har bir kishi uchun sifatli ta&apos;lim.
@@ -33,12 +34,12 @@ export default function FooterExample() {
                     <div>
                         <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Telegram</p>
                         <a
-                            href="https://t.me/DESTINY_EDUCATION1"
+                            href="https://t.me/destiny_education1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-white transition-colors"
                         >
-                            @DESTINY_EDUCATION1
+                            @destiny_education1
                         </a>
                     </div>
 
@@ -46,12 +47,12 @@ export default function FooterExample() {
                     <div>
                         <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Instagram</p>
                         <a
-                            href="https://instagram.com/DESTINY_EDUCATION1"
+                            href="https://instagram.com/destiny_education1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-white transition-colors"
                         >
-                            @DESTINY_EDUCATION1
+                            @destiny_education1
                         </a>
                     </div>
                 </div>
@@ -59,7 +60,7 @@ export default function FooterExample() {
 
             <div className="border-t border-white/10">
                 <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-white/50">
-                    Destiny Education ©2025. Barcha huquqlar himoyalangan.
+                    Destiny Education ©2026. Barcha huquqlar himoyalangan.
                 </div>
             </div>
         </footer>

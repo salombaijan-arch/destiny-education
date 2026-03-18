@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Globe, BookOpen, MessageCircle, Plane, Moon, Smile, Calculator, Trophy, School, Heart, Baby } from "lucide-react";
 import IntroAnimation from "@/components/ui/scroll-morph-hero";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ScrollVelocity } from "@/components/ui/scroll-velocity";
@@ -33,73 +34,29 @@ const COURSE_TABS = [
     label: "O'quvchilar uchun",
     subtitle: "Tillar va Fanlar",
     courses: [
-      {
-        name: "Ingliz tili",
-        tag: "IELTS · CEFR · Bolalar uchun ingliz tili",
-        description: "Keng qamrovli ingliz tili dasturlarimiz bilan global imkoniyatlar eshigini oching! Bolalar uchun qiziqarli va interaktiv darslardan tortib, intensiv IELTS va CEFR imtihoniga tayyorgarlikacha — biz har yoshdagi o'quvchilarga ravonlik va ishonchlilik kasb etishga yordam beramiz.",
-      },
-      {
-        name: "O'zbek tili",
-        tag: "Grammatika · Suhbat",
-        description: "O'zbek tilining boyligini o'zganing. Maktab uchun grammatika va yozuv ko'nikmalaringizni takomillashtirasizmi yoki asosiy suhbat ko'nikmalarini o'rganasizmi — bizning qiziqarli darslarimiz madaniyat bilan bog'lanishni har qachongidan oson qiladi.",
-      },
-      {
-        name: "Rus tili",
-        tag: "Bolalar va Kattalar uchun",
-        description: "Kuchli, amaliy muloqot ko'nikmalarini rivojlantiring. Biz bolalar uchun alfavit va grammatikani o'rganishni qiziqarli qiladigan, kattalar uchun esa haqiqiy hayotda muloqot qobiliyatini beruvchi moslashtirilgan rus tili darslarini taqdim etamiz.",
-      },
-      {
-        name: "Turk tili",
-        tag: "Gapirish · Tinglash · Madaniyat",
-        description: "Turk tilining rang-barang olamiga qadam qo'ying! Bizning interaktiv darslarimiz gapirish, tinglash va madaniy nozikliklarga e'tibor qaratadi — chet elda o'qishni, sayohat qilishni yoki ufqlarini kengaytirishni rejalashtirgan talabalar uchun ideal.",
-      },
-      {
-        name: "Arab tili",
-        tag: "O'qish · Yozish · Gapirish",
-        description: "Arab tilining go'zalligini kashf eting. Bizning tizimli darslarimiz sizni o'qish, yozish va gapirish bo'yicha ehtiyotkorlik bilan yo'lga soladi — maqsadingiz akademik muvaffaqiyat, sayohat yoki shaxsiy o'sish bo'lishidan qat'i nazar.",
-      },
-      {
-        name: "Koreya tili",
-        tag: "Hangul · Suhbat",
-        description: "Yangi sevimli tilingizga Annyeonghaseyo deying! K-madaniyat muxlislari va kelajakdagi almashinuv talabalari uchun mo'ljallangan koreyscha kursimiz Hangul alifbosidan tortib, kundalik suhbatgacha hamma narsani qamrab oladi.",
-      },
-      {
-        name: "Matematika",
-        tag: "Baholar · Imtihonlar · Mantiq",
-        description: "Raqamlarni kuchingizga aylantiring! Matematika darslarimiz murakkab tushunchalarni tushunarli qadamlarga ajratib, o'quvchilarga maktab baholarini oshirishga, imtihonlarga tayyorlanishga va kuchli mantiqiy fikrlashni rivojlantirishga yordam beradi.",
-      },
+      { icon: Globe,          name: "Ingliz tili",        tag: "IELTS · CEFR · Bolalar uchun ingliz tili", description: "Keng qamrovli ingliz tili dasturlarimiz bilan global imkoniyatlar eshigini oching! Bolalar uchun qiziqarli va interaktiv darslardan tortib, intensiv IELTS va CEFR imtihoniga tayyorgarlikacha — biz har yoshdagi o'quvchilarga ravonlik va ishonchlilik kasb etishga yordam beramiz." },
+      { icon: BookOpen,       name: "O'zbek tili",        tag: "Grammatika · Suhbat", description: "O'zbek tilining boyligini o'zganing. Maktab uchun grammatika va yozuv ko'nikmalaringizni takomillashtirasizmi yoki asosiy suhbat ko'nikmalarini o'rganasizmi — bizning qiziqarli darslarimiz madaniyat bilan bog'lanishni har qachongidan oson qiladi." },
+      { icon: MessageCircle,  name: "Rus tili",           tag: "Bolalar va Kattalar uchun", description: "Kuchli, amaliy muloqot ko'nikmalarini rivojlantiring. Biz bolalar uchun alfavit va grammatikani o'rganishni qiziqarli qiladigan, kattalar uchun esa haqiqiy hayotda muloqot qobiliyatini beruvchi moslashtirilgan rus tili darslarini taqdim etamiz." },
+      { icon: Plane,          name: "Turk tili",          tag: "Gapirish · Tinglash · Madaniyat", description: "Turk tilining rang-barang olamiga qadam qo'ying! Bizning interaktiv darslarimiz gapirish, tinglash va madaniy nozikliklarga e'tibor qaratadi — chet elda o'qishni, sayohat qilishni yoki ufqlarini kengaytirishni rejalashtirgan talabalar uchun ideal." },
+      { icon: Moon,           name: "Arab tili",          tag: "O'qish · Yozish · Gapirish", description: "Arab tilining go'zalligini kashf eting. Bizning tizimli darslarimiz sizni o'qish, yozish va gapirish bo'yicha ehtiyotkorlik bilan yo'lga soladi — maqsadingiz akademik muvaffaqiyat, sayohat yoki shaxsiy o'sish bo'lishidan qat'i nazar." },
+      { icon: Smile,          name: "Koreya tili",        tag: "Hangul · Suhbat", description: "Yangi sevimli tilingizga Annyeonghaseyo deying! K-madaniyat muxlislari va kelajakdagi almashinuv talabalari uchun mo'ljallangan koreyscha kursimiz Hangul alifbosidan tortib, kundalik suhbatgacha hamma narsani qamrab oladi." },
+      { icon: Calculator,     name: "Matematika",         tag: "Baholar · Imtihonlar · Mantiq", description: "Raqamlarni kuchingizga aylantiring! Matematika darslarimiz murakkab tushunchalarni tushunarli qadamlarga ajratib, o'quvchilarga maktab baholarini oshirishga, imtihonlarga tayyorlanishga va kuchli mantiqiy fikrlashni rivojlantirishga yordam beradi." },
     ],
   },
   {
     label: "Bolalar uchun",
     subtitle: "Rivojlanish va Ko'ngil ochish",
     courses: [
-      {
-        name: "Shaxmat va Shashka",
-        tag: "Strategiya · Diqqat · Muammo hal qilish",
-        description: "O'tkir zehnlar va strategik fikrlashni rivojlantiring! Stol o'yinlarining qiziqarli dunyosi orqali bolalar o'ynab-kulgan holda sabr-toqat, muammo hal qilish va diqqatni mujassamlashtirishni o'rganadilar.",
-      },
-      {
-        name: "Maktabga Tayyorgarlik",
-        tag: "O'qish · Matematika · Ijtimoiy Ko'nikmalar",
-        description: "Farzandlaringizga eng yaxshi boshlanishni bering. Maktabga tayyorgarlik dasturimiz asosiy o'qish, matematika va ijtimoiy ko'nikmalarga e'tibor qaratib, ularning birinchi sinfga shod-xurram va ishonch bilan kirishini ta'minlaydi.",
-      },
+      { icon: Trophy,   name: "Shaxmat va Shashka",    tag: "Strategiya · Diqqat · Muammo hal qilish", description: "O'tkir zehnlar va strategik fikrlashni rivojlantiring! Stol o'yinlarining qiziqarli dunyosi orqali bolalar o'ynab-kulgan holda sabr-toqat, muammo hal qilish va diqqatni mujassamlashtirishni o'rganadilar." },
+      { icon: School,   name: "Maktabga Tayyorgarlik", tag: "O'qish · Matematika · Ijtimoiy Ko'nikmalar", description: "Farzandlaringizga eng yaxshi boshlanishni bering. Maktabga tayyorgarlik dasturimiz asosiy o'qish, matematika va ijtimoiy ko'nikmalarga e'tibor qaratib, ularning birinchi sinfga shod-xurram va ishonch bilan kirishini ta'minlaydi." },
     ],
   },
   {
     label: "Ayollar uchun",
     subtitle: "Kasbiy va Amaliy Ko'nikmalar",
     courses: [
-      {
-        name: "Uy Hamshiraligi va Massaj",
-        tag: "Amaliy · Kasb · G'amxo'rlik",
-        description: "O'zingizni qimmatli, amaliy ko'nikmalar bilan kuchlantiring. Ushbu maxsus dastur asosiy uy hamshiraligi usullari va professional massaj terapiyasini (kattalar va bolalar uchun) qamrab oladi — yangi karyera eshiklarini ochadi yoki yaqinlaringizga g'amxo'rlik qilishga yordam beradi.",
-      },
-      {
-        name: "Bolalar Parvarishi",
-        tag: "Bolalar g'amxo'rligi · Xavfsizlik · Faoliyatlar",
-        description: "Bolalarga bo'lgan muhabbatingizni foydali kasbga yoki qimmatli hayotiy ko'nikmaga aylantiring! Keng qamrovli bolalar parvarishi kursimiz asosiy bolalar g'amxo'rligi usullari, xavfsizlik protokollari va qiziqarli faoliyatlarni qamrab oladi.",
-      },
+      { icon: Heart, name: "Uy Hamshiraligi va Massaj", tag: "Amaliy · Kasb · G'amxo'rlik", description: "O'zingizni qimmatli, amaliy ko'nikmalar bilan kuchlantiring. Ushbu maxsus dastur asosiy uy hamshiraligi usullari va professional massaj terapiyasini (kattalar va bolalar uchun) qamrab oladi — yangi karyera eshiklarini ochadi yoki yaqinlaringizga g'amxo'rlik qilishga yordam beradi." },
+      { icon: Baby,  name: "Bolalar Parvarishi",        tag: "Bolalar g'amxo'rligi · Xavfsizlik · Faoliyatlar", description: "Bolalarga bo'lgan muhabbatingizni foydali kasbga yoki qimmatli hayotiy ko'nikmaga aylantiring! Keng qamrovli bolalar parvarishi kursimiz asosiy bolalar g'amxo'rligi usullari, xavfsizlik protokollari va qiziqarli faoliyatlarni qamrab oladi." },
     ],
   },
 ];
@@ -155,6 +112,7 @@ function CoursesSection() {
             key={course.name}
             className="rounded-2xl border bg-background p-6 flex flex-col gap-3 hover:shadow-md transition-shadow"
           >
+            <course.icon className="size-7 text-primary" strokeWidth={1.5} />
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-foreground text-lg">{course.name}</h3>
               <span className="text-xs text-primary font-medium">{course.tag}</span>
@@ -229,11 +187,10 @@ export default function Home() {
           transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
           className="text-2xl px-4 md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
         >
-          Xush kelibsiz{" "}
           <Highlight className="text-foreground">
             Destiny Education
           </Highlight>
-          ga, bu yerda o&apos;rganishning yoshi yo&apos;q! Bizning vazifamiz oddiy: hamjamiyatimizdagi har bir kishi rivojlanib, o&apos;sishi uchun iliq, ilhomli muhit yaratish.
+          ga xush kelibsiz, bu yerda o&apos;rganishning yoshi yo&apos;q! Bizning vazifamiz oddiy: hamjamiyatimizdagi har bir kishi rivojlanib, o&apos;sishi uchun iliq, ilhomli muhit yaratish.
         </motion.h1>
       </HeroHighlight>
 
@@ -255,7 +212,7 @@ export default function Home() {
               {images.map(({ title, thumbnail }) => (
                 <div
                   key={title}
-                  className="relative h-[6rem] w-[9rem] md:h-[8rem] md:w-[12rem] xl:h-[12rem] xl:w-[18rem] overflow-hidden rounded-xl flex-shrink-0"
+                  className="relative h-[350px] w-[250px] overflow-hidden rounded-xl flex-shrink-0"
                 >
                   <img
                     src={thumbnail}
@@ -291,7 +248,7 @@ export default function Home() {
         title="O'quv Sayohatingizni Boshlashga Tayyormisiz?"
         description="Bugun Destiny Education oilasiga qo'shiling! Yangi til o'rganyapsizmi, farzandingizga boshlanish berayapsizmi yoki yangi kasb egallayapsizmi — biz yordam berishga tayyormiz."
         buttonText="Telegramda Yozing"
-        buttonUrl="https://t.me/DESTINY_EDUCATION1"
+        buttonUrl="https://t.me/destiny_education1"
         items={[
           "Maqbul O'quv Jadvali",
           "Butun Oila uchun Ta'lim",

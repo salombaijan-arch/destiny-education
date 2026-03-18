@@ -13,8 +13,8 @@ interface FlipCardProps {
     target: { x: number; y: number; rotation: number; scale: number; opacity: number };
 }
 
-const IMG_WIDTH = 60;
-const IMG_HEIGHT = 85;
+const IMG_WIDTH = 120;
+const IMG_HEIGHT = 170;
 
 function FlipCard({ src, index, target }: FlipCardProps) {
     return (
@@ -54,7 +54,7 @@ function FlipCard({ src, index, target }: FlipCardProps) {
     );
 }
 
-const TOTAL_IMAGES = 22;
+const TOTAL_IMAGES = 15;
 const MAX_SCROLL = 3000;
 
 const IMAGES = [
@@ -243,7 +243,7 @@ export default function IntroAnimation() {
                                 x: Math.cos(arcRad) * arcRadius + parallaxValue,
                                 y: Math.sin(arcRad) * arcRadius + arcCenterY,
                                 rotation: currentArcAngle + 90,
-                                scale: isMobile ? 1.4 : 1.8,
+                                scale: isMobile ? 0.78 : 1.0,
                             };
                             target = {
                                 x: lerp(circlePos.x, arcPos.x, morphValue),
