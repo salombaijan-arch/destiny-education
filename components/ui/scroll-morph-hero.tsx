@@ -106,7 +106,7 @@ export default function IntroAnimation() {
 
     useEffect(() => {
         const container = containerRef.current;
-        if (!container) return;
+        if (!container || containerSize.width < 768) return;
         const handleWheel = (e: WheelEvent) => {
             const atBottom = scrollRef.current >= MAX_SCROLL && e.deltaY > 0;
             const atTop = scrollRef.current <= 0 && e.deltaY < 0;
@@ -116,29 +116,11 @@ export default function IntroAnimation() {
             scrollRef.current = newScroll;
             virtualScroll.set(newScroll);
         };
-        let touchStartY = 0;
-        const handleTouchStart = (e: TouchEvent) => { touchStartY = e.touches[0].clientY; };
-        const handleTouchMove = (e: TouchEvent) => {
-            const touchY = e.touches[0].clientY;
-            const deltaY = touchStartY - touchY;
-            touchStartY = touchY;
-            const atBottom = scrollRef.current >= MAX_SCROLL && deltaY > 0;
-            const atTop = scrollRef.current <= 0 && deltaY < 0;
-            if (atBottom || atTop) return;
-            e.preventDefault();
-            const newScroll = Math.min(Math.max(scrollRef.current + deltaY, 0), MAX_SCROLL);
-            scrollRef.current = newScroll;
-            virtualScroll.set(newScroll);
-        };
         container.addEventListener("wheel", handleWheel, { passive: false });
-        container.addEventListener("touchstart", handleTouchStart, { passive: false });
-        container.addEventListener("touchmove", handleTouchMove, { passive: false });
         return () => {
             container.removeEventListener("wheel", handleWheel);
-            container.removeEventListener("touchstart", handleTouchStart);
-            container.removeEventListener("touchmove", handleTouchMove);
         };
-    }, [virtualScroll]);
+    }, [virtualScroll, containerSize.width]);
 
     const morphProgress = useTransform(virtualScroll, [0, 600], [0, 1]);
     const smoothMorph = useSpring(morphProgress, { stiffness: 40, damping: 20 });
@@ -188,8 +170,24 @@ export default function IntroAnimation() {
     const contentOpacity = useTransform(smoothMorph, [0.8, 1], [0, 1]);
     const contentY = useTransform(smoothMorph, [0.8, 1], [20, 0]);
 
+    const isMobileView = containerSize.width < 768 && containerSize.width > 0;
+
     return (
         <div ref={containerRef} className="relative w-full h-full bg-background overflow-hidden">
+
+            {/* ── Mobile layout ── */}
+            {isMobileView && (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-4 px-6 text-center">
+                    <img src="/destiny-logo.png" alt="Destiny Education" className="w-32 h-32 object-contain mix-blend-multiply" />
+                    <h2 className="text-3xl font-semibold text-foreground tracking-tight">Destiny Education</h2>
+                    <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+                        Biz sifatli ta&apos;lim hamma uchun ochiq, qiziqarli va qo&apos;llab-quvvatlovchi bo&apos;lishi kerak deb ishonamiz — chunki sizga to&apos;liq salohiyatingizga erishishda yordam berish bizning eng buyuk taqdirimizdir.
+                    </p>
+                </div>
+            )}
+
+            {/* ── Desktop layout ── */}
+            {!isMobileView && (
             <div className="flex h-full w-full flex-col items-center justify-center" style={{ perspective: "1000px" }}>
                 <motion.div
                     style={{ opacity: contentOpacity, y: contentY }}
@@ -205,7 +203,7 @@ export default function IntroAnimation() {
                     <img
                         src="/destiny-logo.png"
                         alt="Destiny Education"
-                        className="w-48 h-48 md:w-64 md:h-64 object-contain mix-blend-multiply"
+                        className="w-64 h-64 object-contain mix-blend-multiply"
                     />
                 </div>
 
@@ -258,6 +256,8 @@ export default function IntroAnimation() {
                     })}
                 </div>
             </div>
+            )}
+
         </div>
     );
 }

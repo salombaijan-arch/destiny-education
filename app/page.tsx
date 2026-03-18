@@ -175,7 +175,7 @@ export default function Home() {
     <main className="min-h-screen">
 
       {/* ── 0 · Scroll Morph Hero ──────────────────────────────────────── */}
-      <div className="w-full h-[800px] relative">
+      <div className="w-full h-[500px] relative">
         <IntroAnimation />
       </div>
 
