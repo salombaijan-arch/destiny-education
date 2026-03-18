@@ -198,7 +198,7 @@ export default function IntroAnimation() {
                 >
                     <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight mb-4">Destiny Education</h2>
                     <p className="text-sm md:text-base text-muted-foreground max-w-lg leading-relaxed">
-                        We believe that quality education should be accessible, engaging, and deeply supportive—because helping you reach your full potential is our greatest destiny.
+                        Biz sifatli ta&apos;lim hamma uchun ochiq, qiziqarli va qo&apos;llab-quvvatlovchi bo&apos;lishi kerak deb ishonamiz — chunki sizga to&apos;liq salohiyatingizga erishishda yordam berish bizning eng buyuk taqdirimizdir.
                     </p>
                 </motion.div>
                 {/* Logo centered with multiply blend */}

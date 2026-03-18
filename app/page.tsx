@@ -30,75 +30,75 @@ function SectionHeader({ badge, title, description }: { badge: string; title: st
 
 const COURSE_TABS = [
   {
-    label: "For Students",
-    subtitle: "Languages & Sciences",
+    label: "O'quvchilar uchun",
+    subtitle: "Tillar va Fanlar",
     courses: [
       {
-        name: "English",
-        tag: "IELTS · CEFR · Kids English",
-        description: "Unlock global opportunities with our comprehensive English programs! From fun, interactive lessons for kids to intensive IELTS and CEFR exam preparation, we help learners of all ages achieve fluency and confidence.",
+        name: "Ingliz tili",
+        tag: "IELTS · CEFR · Bolalar uchun ingliz tili",
+        description: "Keng qamrovli ingliz tili dasturlarimiz bilan global imkoniyatlar eshigini oching! Bolalar uchun qiziqarli va interaktiv darslardan tortib, intensiv IELTS va CEFR imtihoniga tayyorgarlikacha — biz har yoshdagi o'quvchilarga ravonlik va ishonchlilik kasb etishga yordam beramiz.",
       },
       {
-        name: "Uzbek",
-        tag: "Grammar · Conversation",
-        description: "Master the richness of the Uzbek language. Whether you are refining your grammar and writing skills for school or learning conversational basics, our engaging lessons make connecting with the culture easier than ever.",
+        name: "O'zbek tili",
+        tag: "Grammatika · Suhbat",
+        description: "O'zbek tilining boyligini o'zganing. Maktab uchun grammatika va yozuv ko'nikmalaringizni takomillashtirasizmi yoki asosiy suhbat ko'nikmalarini o'rganasizmi — bizning qiziqarli darslarimiz madaniyat bilan bog'lanishni har qachongidan oson qiladi.",
       },
       {
-        name: "Russian",
-        tag: "Kids & Adults",
-        description: "Build strong, practical communication skills. We offer tailored Russian classes that make learning the alphabet and grammar fun for children, while providing real-world conversational fluency for adults.",
+        name: "Rus tili",
+        tag: "Bolalar va Kattalar uchun",
+        description: "Kuchli, amaliy muloqot ko'nikmalarini rivojlantiring. Biz bolalar uchun alfavit va grammatikani o'rganishni qiziqarli qiladigan, kattalar uchun esa haqiqiy hayotda muloqot qobiliyatini beruvchi moslashtirilgan rus tili darslarini taqdim etamiz.",
       },
       {
-        name: "Turkish",
-        tag: "Speaking · Listening · Culture",
-        description: "Step into the vibrant world of the Turkish language! Our interactive classes focus on speaking, listening, and cultural nuances, perfect for students planning to study abroad, travel, or expand their horizons.",
+        name: "Turk tili",
+        tag: "Gapirish · Tinglash · Madaniyat",
+        description: "Turk tilining rang-barang olamiga qadam qo'ying! Bizning interaktiv darslarimiz gapirish, tinglash va madaniy nozikliklarga e'tibor qaratadi — chet elda o'qishni, sayohat qilishni yoki ufqlarini kengaytirishni rejalashtirgan talabalar uchun ideal.",
       },
       {
-        name: "Arabic",
-        tag: "Reading · Writing · Speaking",
-        description: "Discover the beauty of Arabic. Our structured lessons carefully guide you through reading, writing, and speaking, whether your goal is academic achievement, travel, or personal growth.",
+        name: "Arab tili",
+        tag: "O'qish · Yozish · Gapirish",
+        description: "Arab tilining go'zalligini kashf eting. Bizning tizimli darslarimiz sizni o'qish, yozish va gapirish bo'yicha ehtiyotkorlik bilan yo'lga soladi — maqsadingiz akademik muvaffaqiyat, sayohat yoki shaxsiy o'sish bo'lishidan qat'i nazar.",
       },
       {
-        name: "Korean",
-        tag: "Hangul · Conversation",
-        description: "Say Annyeonghaseyo to your new favorite language! Designed for K-culture fans and future exchange students alike, our Korean course covers everything from the Hangul alphabet to everyday conversational fluency.",
+        name: "Koreya tili",
+        tag: "Hangul · Suhbat",
+        description: "Yangi sevimli tilingizga Annyeonghaseyo deying! K-madaniyat muxlislari va kelajakdagi almashinuv talabalari uchun mo'ljallangan koreyscha kursimiz Hangul alifbosidan tortib, kundalik suhbatgacha hamma narsani qamrab oladi.",
       },
       {
-        name: "Math",
-        tag: "Grades · Exams · Logic",
-        description: "Make numbers your superpower! Our math classes break down complex concepts into easy-to-understand steps, helping students boost their school grades, prepare for exams, and develop strong logical thinking.",
+        name: "Matematika",
+        tag: "Baholar · Imtihonlar · Mantiq",
+        description: "Raqamlarni kuchingizga aylantiring! Matematika darslarimiz murakkab tushunchalarni tushunarli qadamlarga ajratib, o'quvchilarga maktab baholarini oshirishga, imtihonlarga tayyorlanishga va kuchli mantiqiy fikrlashni rivojlantirishga yordam beradi.",
       },
     ],
   },
   {
-    label: "For Kids",
-    subtitle: "Development & Fun",
+    label: "Bolalar uchun",
+    subtitle: "Rivojlanish va Ko'ngil ochish",
     courses: [
       {
-        name: "Chess & Checkers",
-        tag: "Strategy · Focus · Problem-Solving",
-        description: "Develop sharp minds and strategic thinking! Through the fun of board games, children learn patience, problem-solving, and concentration in a playful, supportive environment.",
+        name: "Shaxmat va Shashka",
+        tag: "Strategiya · Diqqat · Muammo hal qilish",
+        description: "O'tkir zehnlar va strategik fikrlashni rivojlantiring! Stol o'yinlarining qiziqarli dunyosi orqali bolalar o'ynab-kulgan holda sabr-toqat, muammo hal qilish va diqqatni mujassamlashtirishni o'rganadilar.",
       },
       {
-        name: "School Preparation",
-        tag: "Reading · Math · Social Skills",
-        description: "Give your little ones the best start possible. Our School Preparation program focuses on foundational reading, basic math, and social skills to ensure they step into their first classroom with joy and confidence.",
+        name: "Maktabga Tayyorgarlik",
+        tag: "O'qish · Matematika · Ijtimoiy Ko'nikmalar",
+        description: "Farzandlaringizga eng yaxshi boshlanishni bering. Maktabga tayyorgarlik dasturimiz asosiy o'qish, matematika va ijtimoiy ko'nikmalarga e'tibor qaratib, ularning birinchi sinfga shod-xurram va ishonch bilan kirishini ta'minlaydi.",
       },
     ],
   },
   {
-    label: "For Women",
-    subtitle: "Vocational & Practical Skills",
+    label: "Ayollar uchun",
+    subtitle: "Kasbiy va Amaliy Ko'nikmalar",
     courses: [
       {
-        name: "Home Nursing & Massage",
-        tag: "Hands-On · Career · Care",
-        description: "Empower yourself with valuable, hands-on skills. This specialized program covers essential home nursing techniques and professional massage therapy (for adults and kids), opening doors to new careers or helping you care for loved ones.",
+        name: "Uy Hamshiraligi va Massaj",
+        tag: "Amaliy · Kasb · G'amxo'rlik",
+        description: "O'zingizni qimmatli, amaliy ko'nikmalar bilan kuchlantiring. Ushbu maxsus dastur asosiy uy hamshiraligi usullari va professional massaj terapiyasini (kattalar va bolalar uchun) qamrab oladi — yangi karyera eshiklarini ochadi yoki yaqinlaringizga g'amxo'rlik qilishga yordam beradi.",
       },
       {
-        name: "Babysitting",
-        tag: "Child Care · Safety · Activities",
-        description: "Turn your love for children into a rewarding career or a valuable life skill! Our comprehensive babysitting course covers essential child care techniques, safety protocols, and engaging activities, ensuring you are fully prepared to care for kids of all ages with confidence.",
+        name: "Bolalar Parvarishi",
+        tag: "Bolalar g'amxo'rligi · Xavfsizlik · Faoliyatlar",
+        description: "Bolalarga bo'lgan muhabbatingizni foydali kasbga yoki qimmatli hayotiy ko'nikmaga aylantiring! Keng qamrovli bolalar parvarishi kursimiz asosiy bolalar g'amxo'rligi usullari, xavfsizlik protokollari va qiziqarli faoliyatlarni qamrab oladi.",
       },
     ],
   },
@@ -112,9 +112,9 @@ function CoursesSection() {
     <section className="py-24 px-6">
       <div className="mb-12">
         <SectionHeader
-          badge="Our Courses"
-          title="Explore Our Learning Pathways"
-          description="Discover engaging, practical classes tailored specifically for students, children, and women. Convenient schedules, expert instructors, and a supportive environment await."
+          badge="Kurslarimiz"
+          title="O'quv Yo'nalishlarimizni Kashf Eting"
+          description="O'quvchilar, bolalar va ayollar uchun maxsus moslashtirilgan qiziqarli, amaliy darslarni kashf eting. Qulay jadval, tajribali o'qituvchilar va qo'llab-quvvatlovchi muhit sizni kutmoqda."
         />
       </div>
 
@@ -168,15 +168,15 @@ function CoursesSection() {
 }
 
 const testimonials: Testimonial[] = [
-  { text: "We deployed 12 NOVA units on our assembly line in Q3. Within 60 days, throughput increased 34% with zero quality escapes. Fastest ROI we've ever seen on automation.", image: "https://randomuser.me/api/portraits/women/44.jpg", name: "Sarah Chen", role: "VP Operations, NovaTech Industries" },
-  { text: "The 10-hour battery was the deciding factor. Every robot we'd tested before required constant swap-outs. NOVA runs the full shift and is ready again after scheduled breaks.", image: "https://randomuser.me/api/portraits/men/32.jpg", name: "Marcus Webb", role: "Director of Logistics, Apex Fulfillment" },
-  { text: "We trained NOVA on our door-panel sub-assembly in six hours. By hour eight it was outperforming our fastest operators on cycle time. The learning curve is genuinely remarkable.", image: "https://randomuser.me/api/portraits/women/68.jpg", name: "Dr. Priya Nair", role: "Head of Mfg. Engineering, Stellaris Auto" },
-  { text: "We've benchmarked everything on the market. At this price point, the combination of dexterity, runtime, and AI capability is in a class of its own. Nothing else comes close.", image: "https://randomuser.me/api/portraits/men/75.jpg", name: "James Okafor", role: "CEO, Harbor Robotics Lab" },
-  { text: "NOVA's precision handling of sterile supplies and lab samples reduced our delivery errors by 91%. Our nursing staff now focuses entirely on patients. The impact has been profound.", image: "https://randomuser.me/api/portraits/women/22.jpg", name: "Linda Park", role: "Dir. Facility Ops, MedCore Health" },
-  { text: "The ND Intelligence fleet dashboard is exceptional — real-time unit status, predictive maintenance alerts, remote task deployment. Managing 40 units across three sites is seamless.", image: "https://randomuser.me/api/portraits/men/58.jpg", name: "Ahmed Al-Rashid", role: "CTO, Gulf Industrial Group" },
-  { text: "Produce handling requires touching delicate items without bruising. NOVA's force-sensing hands dropped our rejection rate from 8% to under 1% in the first month of deployment.", image: "https://randomuser.me/api/portraits/women/12.jpg", name: "Emma Thornton", role: "Plant Manager, Cascade Foods" },
-  { text: "We piloted NOVA for container content sorting and hit 99.2% accuracy in week one. We're scaling to 200 units across our Pacific terminals in 2026. This is the real deal.", image: "https://randomuser.me/api/portraits/men/41.jpg", name: "Carlos Rivera", role: "Head of Automation, Pacific Ports" },
-  { text: "PCB component handling is our most sensitive task. NOVA's 3 mN tactile sensitivity is no marketing claim — zero ESD incidents and zero component damage across 180,000 handled parts.", image: "https://randomuser.me/api/portraits/women/85.jpg", name: "Yuki Tanaka", role: "R&D Lead, Quantum Electronics" },
+  { text: "Destiny Education'da ingliz tilini o'rganish hayotimni o'zgartirdi. O'qituvchilar juda mehribon va sabrli — endi IELTS da 7.0 ball oldim!", image: "https://randomuser.me/api/portraits/women/44.jpg", name: "Malika Yusupova", role: "IELTS o'quvchisi" },
+  { text: "Farzandim maktabga tayyorgarlik kursidan keyin o'zgarib ketdi. Endi o'qishni va matematikani sevadi. Markazga juda minnatdormiz!", image: "https://randomuser.me/api/portraits/men/32.jpg", name: "Jasur Karimov", role: "Ota, Maktabga Tayyorgarlik kursi" },
+  { text: "Turk tili darslarimiz juda qiziqarli o'tadi. Atigi 3 oyda oddiy suhbat qurishni o'rgandim. O'qituvchimiz Dilnoza opa juda ajoyib!", image: "https://randomuser.me/api/portraits/women/68.jpg", name: "Sarvinoz Toshmatova", role: "Turk tili o'quvchisi" },
+  { text: "Shaxmat to'garagiga qatnashganimdan beri o'g'limning diqqati va mantiqiy fikrlashi sezilarli darajada yaxshilandi. Ajoyib dastur!", image: "https://randomuser.me/api/portraits/men/75.jpg", name: "Bobur Hasanov", role: "Ota, Shaxmat to'garagi" },
+  { text: "Massaj kursini tugatib, uy sharoitida qo'shimcha daromad qila boshladim. Amaliy va foydali dastur uchun katta rahmat!", image: "https://randomuser.me/api/portraits/women/22.jpg", name: "Nafisa Rahimova", role: "Massaj kursi bitiruvchisi" },
+  { text: "Arab tilini o'rganish juda qiyin deb o'ylardim, lekin bu yerda juda tushunarli o'qitishadi. Endi Qur'onni to'g'ri o'qiy olaman.", image: "https://randomuser.me/api/portraits/men/58.jpg", name: "Sherzod Nazarov", role: "Arab tili o'quvchisi" },
+  { text: "Koreya tilini K-drama tufayli o'rganishni boshladim. Destiny Education'dagi kurs mening kutganimdan ham yaxshiroq chiqdi!", image: "https://randomuser.me/api/portraits/women/12.jpg", name: "Zulfiya Mirzayeva", role: "Koreya tili o'quvchisi" },
+  { text: "Matematika darslaridan keyin o'g'limning maktabdagi baholari sezilarli oshdi. O'qituvchi juda yaxshi tushuntiradi, tavsiya qilaman!", image: "https://randomuser.me/api/portraits/men/41.jpg", name: "Ulugbek Tursunov", role: "Ota, Matematika kursi" },
+  { text: "Bolalar parvarishi kursini tugatib, ishonch bilan bola qaray oladigan bo'ldim. Endi qo'shimcha ish topa olaman. Rahmat Destiny Education!", image: "https://randomuser.me/api/portraits/women/85.jpg", name: "Dilrabo Ismoilova", role: "Bolalar Parvarishi kursi bitiruvchisi" },
 ];
 
 const galleryImages = [
@@ -229,11 +229,11 @@ export default function Home() {
           transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
           className="text-2xl px-4 md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
         >
-          Welcome to{" "}
+          Xush kelibsiz{" "}
           <Highlight className="text-foreground">
             Destiny Education
           </Highlight>
-          , where learning knows no age limit! Our mission is simple: to create a warm, inspiring space where everyone in our community can thrive and grow.
+          ga, bu yerda o&apos;rganishning yoshi yo&apos;q! Bizning vazifamiz oddiy: hamjamiyatimizdagi har bir kishi rivojlanib, o&apos;sishi uchun iliq, ilhomli muhit yaratish.
         </motion.h1>
       </HeroHighlight>
 
@@ -244,8 +244,8 @@ export default function Home() {
       <section className="py-24 overflow-hidden">
         <div className="mb-12">
           <SectionHeader
-            badge="Photo Gallery"
-            title="Life in our center"
+            badge="Foto Galereya"
+            title="Markazimizda hayot"
             description=""
           />
         </div>
@@ -273,9 +273,9 @@ export default function Home() {
       <section className="py-24">
         <div className="container mx-auto">
           <SectionHeader
-            badge="Student Testimonials"
-            title="What Our Students Say"
-            description="Real experiences and genuine feedback from the learners who make our educational center so special."
+            badge="O'quvchilar Fikrlari"
+            title="O'quvchilarimiz Nima Deydi"
+            description="Ta'lim markazimizni shunchalik maxsus qiladigan o'quvchilarning haqiqiy tajribalari va samimiy fikr-mulohazalari."
           />
 
           <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
@@ -288,16 +288,16 @@ export default function Home() {
 
       {/* ── 5 · CTA ───────────────────────────────────────────────────── */}
       <Cta4
-        title="Ready to Start Your Learning Journey?"
-        description="Join the Destiny Education family today! Whether you are picking up a new language, giving your child a head start, or learning a new profession, we are here to help."
-        buttonText="Message Us on Telegram"
+        title="O'quv Sayohatingizni Boshlashga Tayyormisiz?"
+        description="Bugun Destiny Education oilasiga qo'shiling! Yangi til o'rganyapsizmi, farzandingizga boshlanish berayapsizmi yoki yangi kasb egallayapsizmi — biz yordam berishga tayyormiz."
+        buttonText="Telegramda Yozing"
         buttonUrl="https://t.me/DESTINY_EDUCATION1"
         items={[
-          "Optimal Learning Schedule",
-          "Education for the Whole Family",
-          "Practical, Real-World Skills",
-          "Welcoming & Supportive Environment",
-          "Expert Instruction",
+          "Maqbul O'quv Jadvali",
+          "Butun Oila uchun Ta'lim",
+          "Amaliy, Hayotiy Ko'nikmalar",
+          "Iliq va Qo'llab-quvvatlovchi Muhit",
+          "Malakali O'qituvchilar",
         ]}
       />
 

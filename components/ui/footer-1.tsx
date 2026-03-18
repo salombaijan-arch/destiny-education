@@ -6,7 +6,7 @@ export default function FooterExample() {
                 <div className="flex flex-col items-center text-center mb-12">
                     <span className="text-2xl font-semibold tracking-tight mb-3">Destiny Education</span>
                     <p className="max-w-md text-sm leading-relaxed text-white/70">
-                        Where learning knows no age limit. Quality education, accessible to everyone in our community.
+                        Bu yerda o&apos;rganishning yoshi yo&apos;q. Hamjamiyatimizdagi har bir kishi uchun sifatli ta&apos;lim.
                     </p>
                 </div>
 
@@ -14,7 +14,7 @@ export default function FooterExample() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-white/70">
                     {/* Address */}
                     <div>
-                        <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Address</p>
+                        <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Manzil</p>
                         <p className="leading-relaxed">
                             Karmana tumani<br />
                             "Xalqlar do&apos;stligi" ko&apos;chasi<br />
@@ -24,7 +24,7 @@ export default function FooterExample() {
 
                     {/* Phone */}
                     <div>
-                        <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Phone</p>
+                        <p className="text-white font-semibold mb-2 uppercase tracking-widest text-xs">Telefon</p>
                         <a href="tel:+998932083000" className="block hover:text-white transition-colors">+998 93 208 30 00</a>
                         <a href="tel:+998500035022" className="block hover:text-white transition-colors">+998 50 003 50 22</a>
                     </div>
@@ -59,7 +59,7 @@ export default function FooterExample() {
 
             <div className="border-t border-white/10">
                 <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-white/50">
-                    Destiny Education ©2025. All rights reserved.
+                    Destiny Education ©2025. Barcha huquqlar himoyalangan.
                 </div>
             </div>
         </footer>
