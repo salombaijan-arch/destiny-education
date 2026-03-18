@@ -27,7 +27,6 @@ function SectionHeader({ badge, title, description }: { badge: string; title: st
   );
 }
 
-const MARQUEE_VELOCITIES = [3, -3] as const;
 
 const COURSE_TABS = [
   {
@@ -180,20 +179,34 @@ const testimonials: Testimonial[] = [
   { text: "PCB component handling is our most sensitive task. NOVA's 3 mN tactile sensitivity is no marketing claim — zero ESD incidents and zero component damage across 180,000 handled parts.", image: "https://randomuser.me/api/portraits/women/85.jpg", name: "Yuki Tanaka", role: "R&D Lead, Quantum Electronics" },
 ];
 
-// Botanical-meets-industrial: lush natural photography reinforces the
-// contrast between organic visual language and precision engineering.
 const galleryImages = [
-  { title: "Full-Shift Runtime",    thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=40&w=640" },
-  { title: "22 DoF Hands",          thumbnail: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=40&w=640" },
-  { title: "10-Hour Battery",       thumbnail: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=40&w=640" },
-  { title: "ISO 10218 Certified",   thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=40&w=640" },
-  { title: "ND Intelligence",       thumbnail: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=40&w=640" },
-  { title: "3 mN Tactile Sensing",  thumbnail: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=40&w=640" },
-  { title: "Fleet Management",      thumbnail: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=40&w=640" },
-  { title: "Task Learning < 8 hrs", thumbnail: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=40&w=640" },
-  { title: "OTA Updates",           thumbnail: "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=40&w=640" },
-  { title: "Deploy Worldwide",      thumbnail: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=40&w=640" },
+  { title: "All Students Lesson",       thumbnail: "/gallery-photos/all-students-lesson 1.jpg" },
+  { title: "Tablet Learning",           thumbnail: "/gallery-photos/boy-girls-sitting-desk-looking-tablet 1.jpg" },
+  { title: "Children's Massage",        thumbnail: "/gallery-photos/boy-toddler-relaxes-from-therapeutic-massage-physiotherapist-working-with-patient-clinic-treat-back-child 1.jpg" },
+  { title: "Close-Up Classroom",        thumbnail: "/gallery-photos/close-up-students-classroom 1.jpg" },
+  { title: "Teacher Explaining",        thumbnail: "/gallery-photos/confident-teacher-explaining-lesson-pupils 1.jpg" },
+  { title: "Student with Books",        thumbnail: "/gallery-photos/full-shot-student-looking-books 1.jpg" },
+  { title: "Girl Presenting",           thumbnail: "/gallery-photos/girl-presenting-class 1.jpg" },
+  { title: "English Class",             thumbnail: "/gallery-photos/kids-classroom-taking-english-class 1.jpg" },
+  { title: "Planets Lesson",            thumbnail: "/gallery-photos/kids-learning-about-planets-classroom 1.jpg" },
+  { title: "Classroom Selfie",          thumbnail: "/gallery-photos/kids-taking-selfie-classroom 1.jpg" },
+  { title: "Raising Hands",             thumbnail: "/gallery-photos/kids-wanting-answer-question-class 1.jpg" },
+  { title: "Group Study",               thumbnail: "/gallery-photos/medium-shot-kids-cheating-school 1.jpg" },
+  { title: "Math Teacher",              thumbnail: "/gallery-photos/pleased-young-female-math-teacher-wearing-glasses-standing-profile-view-front-chalkboard-holding-russian-alphabet-letter-fans-looking-front-classroom 1.jpg" },
+  { title: "Portrait Teacher",          thumbnail: "/gallery-photos/portrait-female-teacher-classroom 1.jpg" },
+  { title: "Baby Massage",              thumbnail: "/gallery-photos/professional-female-masseuse-makes-massage-little-baby-children-s-massage-couch-modern-cozy-room 1.jpg" },
+  { title: "Our Center",                thumbnail: "/gallery-photos/room-interior-design 1.jpg" },
+  { title: "School Test",               thumbnail: "/gallery-photos/side-view-kid-cheating-school-test 1.jpg" },
+  { title: "Numbers Lesson",            thumbnail: "/gallery-photos/smiling-young-blonde-female-teacher-wearing-glasses-sitting-desk-with-school-supplies-classroom-looking-front-showing-small-square-shaped-numbers-five-zero 1.jpg" },
+  { title: "Blackboard Class",          thumbnail: "/gallery-photos/smiling-young-female-teacher-standing-front-blackboard-holding-mini-blackboard-classroom 1.jpg" },
+  { title: "English Teacher",           thumbnail: "/gallery-photos/teacher-holding-english-class 1.jpg" },
+  { title: "English Class 2",           thumbnail: "/gallery-photos/teacher-holding-english-class-2 1.jpg" },
+  { title: "Science Class",             thumbnail: "/gallery-photos/woman-with-flask-looking-kids-class 1.jpg" },
+  { title: "Thumbs Up Teacher",         thumbnail: "/gallery-photos/young-woman-teacher-wearing-glasses-standing-near-blackboard-classroom-explaining-lesson-showing-thumb-up-smiling-confident 1.jpg" },
 ];
+
+const galleryRow1 = galleryImages.slice(0, 12);
+const galleryRow2 = galleryImages.slice(12);
 
 const firstColumn  = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
@@ -237,9 +250,9 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col" style={{ gap: "40px" }}>
-          {MARQUEE_VELOCITIES.map((v, i) => (
-            <ScrollVelocity key={i} velocity={v}>
-              {galleryImages.map(({ title, thumbnail }) => (
+          {([{ images: galleryRow1, velocity: 1.5 }, { images: galleryRow2, velocity: -1.5 }] as const).map(({ images, velocity }, i) => (
+            <ScrollVelocity key={i} velocity={velocity}>
+              {images.map(({ title, thumbnail }) => (
                 <div
                   key={title}
                   className="relative h-[6rem] w-[9rem] md:h-[8rem] md:w-[12rem] xl:h-[12rem] xl:w-[18rem] overflow-hidden rounded-xl flex-shrink-0"

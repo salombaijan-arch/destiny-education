@@ -54,30 +54,32 @@ function FlipCard({ src, index, target }: FlipCardProps) {
     );
 }
 
-const TOTAL_IMAGES = 20;
+const TOTAL_IMAGES = 22;
 const MAX_SCROLL = 3000;
 
 const IMAGES = [
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80",
-    "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=300&q=80",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&q=80",
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&q=80",
-    "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300&q=80",
-    "https://images.unsplash.com/photo-1506765515384-028b60a970df?w=300&q=80",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&q=80",
-    "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=300&q=80",
-    "https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?w=300&q=80",
-    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&q=80",
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&q=80",
-    "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=300&q=80",
-    "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=300&q=80",
-    "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=300&q=80",
-    "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=300&q=80",
-    "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=300&q=80",
-    "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=300&q=80",
-    "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=300&q=80",
-    "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=300&q=80",
-    "https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?w=300&q=80",
+    "/hero-photos/authentic-scene-kids-playing 1.jpg",
+    "/hero-photos/bonding-together-university-device-book-reading 1.jpg",
+    "/hero-photos/concept-obtaining-higher-international-education-globe-graduation-cap-3d-render-illustration 1.jpg",
+    "/hero-photos/covid-19-preventing-virus-health-healthcare-workers-quarantine-concept-young-doctor-female-nurse-blue-scrubs-protective-equipment-against-coronavirus-infection-give-medical-masks 1.jpg",
+    "/hero-photos/cute-little-baby-bunny-costume-sitting-furry-rug-home 1.jpg",
+    "/hero-photos/education-concept-smiling-brunette-girl-student-casual-clothes-holds-her-books-study-material 1.jpg",
+    "/hero-photos/empty-modern-classroom 1.jpg",
+    "/hero-photos/hallway-with-row-books-floor-door-that-says-library 1.jpg",
+    "/hero-photos/impressed-young-female-teacher-sits-table-with-school-tools-raising-pen-classroom 1.jpg",
+    "/hero-photos/kid-holding-hand-up-classroom 1.jpg",
+    "/hero-photos/little-girl-teaching-ride-skateboard-wearing-helmet 1.jpg",
+    "/hero-photos/modern-library-with-large-reading-area-there-are-many-bookshelves-comfortable-chairs-large-windows-that-let-natural-light 1.jpg",
+    "/hero-photos/mother-hand-massaging-back-muscle-her-baby 1.jpg",
+    "/hero-photos/smart-schoolboy-thinking-answer 1.jpg",
+    "/hero-photos/smiling-business-woman-formal-wear-writes-flipchart-presentation-lecture-office 1.jpg",
+    "/hero-photos/smiling-portrait-girl-holding-blue-border-frame-front-her-face-against-blue-backdrop 1.jpg",
+    "/hero-photos/smiling-student-writing-maths-blackboard 1.jpg",
+    "/hero-photos/student-preparing-exam-learning-lessons-school-library-making-research-laptop-browse-internet 1.jpg",
+    "/hero-photos/teacher-brunette-instructor-with-computer-suit-whiteboard-classroom-crossing-hands 1.jpg",
+    "/hero-photos/young-pretty-student-woman-with-backpack-exercise-books-isolated-white-wall 1.jpg",
+    "/hero-photos/young-student-man-smiling-cheerfully-feeling-happy-pointing-side 1.jpg",
+    "/hero-photos/young-student-using-computer-studying-online-education-online-learning 1.jpg",
 ];
 
 const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * t;
