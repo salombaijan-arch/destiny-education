@@ -11,12 +11,11 @@ interface FlipCardProps {
     total: number;
     phase: AnimationPhase;
     target: { x: number; y: number; rotation: number; scale: number; opacity: number };
+    width: number;
+    height: number;
 }
 
-const IMG_WIDTH = 120;
-const IMG_HEIGHT = 170;
-
-function FlipCard({ src, index, target }: FlipCardProps) {
+function FlipCard({ src, index, target, width, height }: FlipCardProps) {
     return (
         <motion.div
             animate={{
@@ -29,8 +28,8 @@ function FlipCard({ src, index, target }: FlipCardProps) {
             transition={{ type: "spring", stiffness: 40, damping: 15 }}
             style={{
                 position: "absolute",
-                width: IMG_WIDTH,
-                height: IMG_HEIGHT,
+                width,
+                height,
                 transformStyle: "preserve-3d",
                 perspective: "1000px",
             }}
@@ -211,7 +210,10 @@ export default function IntroAnimation() {
                 </div>
 
                 <div className="relative z-20 flex items-center justify-center w-full h-full">
-                    {IMAGES.slice(0, TOTAL_IMAGES).map((src, i) => {
+                    {IMAGES.slice(0, containerSize.width < 768 ? 10 : TOTAL_IMAGES).map((src, i) => {
+                        const isMobile = containerSize.width < 768;
+                        const imgWidth = isMobile ? 60 : 120;
+                        const imgHeight = isMobile ? 85 : 170;
                         let target = { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1 };
                         if (introPhase === "scatter") {
                             target = scatterPositions[i];
@@ -221,7 +223,6 @@ export default function IntroAnimation() {
                             const lineX = i * lineSpacing - lineTotalWidth / 2;
                             target = { x: lineX, y: 0, rotation: 0, scale: 1, opacity: 1 };
                         } else {
-                            const isMobile = containerSize.width < 768;
                             const minDimension = Math.min(containerSize.width, containerSize.height);
                             const circleRadius = Math.min(minDimension * 0.35, 350);
                             const circleAngle = (i / TOTAL_IMAGES) * 360;
@@ -253,7 +254,7 @@ export default function IntroAnimation() {
                                 opacity: 1,
                             };
                         }
-                        return <FlipCard key={i} src={src} index={i} total={TOTAL_IMAGES} phase={introPhase} target={target} />;
+                        return <FlipCard key={i} src={src} index={i} total={TOTAL_IMAGES} phase={introPhase} target={target} width={imgWidth} height={imgHeight} />;
                     })}
                 </div>
             </div>
